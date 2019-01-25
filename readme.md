@@ -14,8 +14,8 @@ python src/examples/migration-analysis/01_scrape.py
 ```
 
 ## Todo
-[] Parametirize the query string
-[] Fix try-except blocks to throw real errors
+- [ ] Parametirize the query string
+- [ ] Fix try-except blocks to throw real errors
 
 ## Disclaimer
 Please note to only use this repository in agreement with github API terms of service (scraping only ok for educational purposes).
