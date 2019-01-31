@@ -12,7 +12,6 @@ from github import Github
 sys.path.append(os.path.join(os.path.dirname(os.path.realpath(__file__)), "../../"))
 
 from Print import Print #pylint: disable=E0401
-from Env import env #pylint: disable=E0401
 
 
 print = Print() # add glorious indentation and colors to print

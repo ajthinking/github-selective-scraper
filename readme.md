@@ -10,7 +10,7 @@ cd github-selective-scraper
 conda env create
 conda activate github-selective-scraper
 source activate
-python src/examples/migration-analysis/01_scrape.py
+python src/main.py
 ```
 
 ## Todo
