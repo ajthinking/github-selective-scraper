@@ -14,12 +14,14 @@ class GithubScraper(object):
     def __init__(
                     self,
                     max_repos = float('inf'),
+                    query = "Laravel",
                     overwrite_repos = True,
                     filters = [],
                     start_date = datetime.datetime.strptime('20080401', r'%Y%m%d').date(),
                     interval_length = 10000, # Default interval in days so big it will be only one interval
                 ):
         self.max_repos = max_repos
+        self.query = query
         self.filters = filters
         self.start_date = start_date
         self.interval_length = interval_length
@@ -36,11 +38,12 @@ class GithubScraper(object):
     def search(self, interval):
         while True:
             try:
-                it = enumerate(self.github.search_repositories(query="Laravel created:" + interval, sort="stars"))
+                it = enumerate(self.github.search_repositories(query= self.query + " created:" + interval))
                 yield from it
                 return   # if we completed the yield from without an exception, we're done!
 
-            except:  # you should probably limit this to catching a specific exception types
+            except Exception as e:  # you should probably limit this to catching a specific exception types
+                print(e)
                 print.warning("Going to sleep for 1 hour. The search API hit the limit?", datetime.datetime.now().strftime("%I:%M%p on %B %d, %Y"))
                 time.sleep(3600)
                 print.warning("Finished sleeping what happens now ... (debug)")

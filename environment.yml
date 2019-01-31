@@ -1,4 +1,4 @@
-name: laravel-ai
+name: github-selective-scraper
 channels:
   - pytorch
   - conda-forge
