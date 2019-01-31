@@ -16,6 +16,7 @@ python src/main.py
 ## Todo
 - [ ] Parametirize the query string
 - [ ] Fix try-except blocks to throw real errors
+- [ ] Remove old AI/pytorch code - this repo should be purely about scraping github
 
 ## Disclaimer
 Please note to only use this repository in agreement with github API terms of service (scraping only ok for educational purposes).
