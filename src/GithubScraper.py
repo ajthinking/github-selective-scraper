@@ -17,7 +17,7 @@ class GithubScraper(object):
                     overwrite_repos = True,
                     filters = [],
                     start_date = datetime.datetime.strptime('20080401', r'%Y%m%d').date(),
-                    interval_length = 1,
+                    interval_length = 10000, # Default interval in days so big it will be only one interval
                 ):
         self.max_repos = max_repos
         self.filters = filters

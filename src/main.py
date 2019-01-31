@@ -21,6 +21,5 @@ GithubScraper(
         # set this in your .env
         start_date = datetime.datetime.strptime(os.getenv("START_SCRAPING_AT"), r'%Y%m%d').date(),
         
-        # if you want to skip the intervals
-        #interval_length = 10000
+        #interval_length = 1
 ).scrape()
