@@ -1,6 +1,6 @@
 # github-selective-scraper
 
-Scrape subsets of github repositories. Warning - this is a work in progress.
+Scrape subsets of github repositories.
 
 ## Installation
 First, make sure you have anaconda installed. Then
@@ -18,6 +18,9 @@ python src/main.py
 
 ## Disclaimer
 Please note to only use this repository in agreement with github API terms of service (scraping only ok for educational purposes).
+
+## Sample
+Here is a dump of a LOT of Laravel migrations harvested using this repo: https://drive.google.com/file/d/1e9Dnr17XXRCRl5E7dv-i-4sxemCqhssB/view
 
 ## License
 MIT
